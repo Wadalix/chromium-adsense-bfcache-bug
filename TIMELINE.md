@@ -43,6 +43,12 @@ This update exposes a massive corporate asymmetry:
 
 Instead of deploying this exact same fix to `adsbygoogle.js`, AdSense engineering channels chose to remain completely silent on Chromium Bug #544217146. To add insult to injury, they are currently pushing an automated account-level override ("Maximize message coverage") that forces automated privacy consent layers over mobile viewports that they already know will freeze into a zombie state.
 
+### ❌ Late Update: Google's Official Capitulation & Support Blackout
+
+The official Google Sellside Engineering channels have formally requested to cease all direct communications regarding this issue, explicitly stating that they will no longer provide updates. In an extraordinary admission of structural failure, support representatives confirmed that this is classified as a "long-term" problem because **"AdSense is a dinosaur architecture that was never engineered to handle BFCache mechanics."**
+
+Instead of allocating resources to rewrite their outdated monetization scripts, Google has chosen a strategy of operational radio silence and publisher abandonment, effectively forcing independent webmasters to absorb 100% of the ongoing mobile impression and revenue bleed.
+
 ---
 
 # 🇪🇸 Versión en Español: Cronología del Abandono de Google
@@ -67,4 +73,10 @@ Esta actualización deja al descubierto una asimetría corporativa escandalosa:
 * **Los editores independientes, abandonados:** Mientras las redes premium corporativas (GAM) reciben refrescos nativos limpios y automatizados, los webmasters independientes que dependen de los scripts estándar de Google AdSense se quedan completamente desamparados.
 
 En lugar de desplegar exactamente esta misma corrección en `adsbygoogle.js`, los canales de ingeniería de AdSense han optado por mantener un silencio administrativo absoluto en el ticket de Chromium #544217146. Para colmo de males, actualmente están forzando una opción automática a nivel de cuenta ("Maximizar la cobertura de los mensajes") que obliga a inyectar capas de consentimiento automatizadas sobre interfaces móviles que ellos ya saben de antemano que se van a congelar en un estado zombi.
+
+### ❌ Última Hora: Capitulación Oficial de Google y Bloqueo de Soporte
+
+Los canales oficiales de Ingeniería de Sellside de Google han solicitado formalmente cesar toda comunicación directa sobre este asunto, declarando explícitamente que no proporcionarán más respuestas. En una admisión extraordinaria de fallo estructural, el equipo de soporte confirmó que este caso está clasificado como un problema a "largo plazo" debido a que **"AdSense es una arquitectura dinosaurio que jamás fue diseñada para gestionar las mecánicas de BFCache."**
+
+En lugar de destinar recursos a reescribir sus obsoletos scripts de monetización, Google ha optado por una estrategia de silencio de radio operativo y abandono del editor, obligando de facto a los webmasters independientes a absorber el 100% de la sangría constante de ingresos e impresiones móviles.
 

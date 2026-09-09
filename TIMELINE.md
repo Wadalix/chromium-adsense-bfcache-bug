@@ -56,7 +56,8 @@ Este apartado documenta de forma objetiva la falta de respuesta por parte del eq
 *   **10 de Agosto de 2026 (La Respuesta Errónea de Google):** El equipo de pruebas de Google intentó buscar el fallo utilizando un ordenador Mac de sobremesa y en una página web que ni siquiera tenía los scripts de AdSense activos. Concluyeron que "no había bloqueo" basándose en un entorno de pruebas completamente falso.
 *   **10 de Agosto de 2026 (Réplica Técnica Formal):** Enviamos una reclamación para romper su veredicto, demostrando detalladamente la falta de rigor del test que hicieron en el Mac y exigiendo que el caso se moviera al equipo de Android.
 *   **11 al 30 de Agosto de 2026 (Exclusión de Sistemas y Silencio):** El equipo de ingenieros modificó las etiquetas del caso para marcarlo como un problema exclusivo de `OS: Android`, borrando del rastreador a Windows para evadir su responsabilidad multiplataforma. Tras una petición de actualización enviada este pasado martes, la respuesta sigue siendo un silencio administrativo absoluto que dura ya 19 días.
-*   **📢 8 de Septiembre de 2026: El Privilegio de GAM y la Discriminación a AdSense (La Prueba Definitiva)
+
+### 📢 8 de Septiembre de 2026: El Privilegio de GAM y la Discriminación a AdSense (La Prueba Definitiva)
 
 Google ha implementado oficialmente una actualización de arquitectura para **Google Ad Manager (GAM)**, proporcionando conectores de eventos nativos y refrescos automáticos de bloques de anuncios diseñados específicamente para gestionar de forma limpia las restauraciones desde el BFCache sin romper el diseño dinámico ni los bucles de ingresos.
 

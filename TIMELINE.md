@@ -49,6 +49,19 @@ The official Google Sellside Engineering channels have formally requested to cea
 
 Instead of allocating resources to rewrite their outdated monetization scripts, Google has chosen a strategy of operational radio silence and publisher abandonment, effectively forcing independent webmasters to absorb 100% of the ongoing mobile impression and revenue bleed.
 
+### 📢 September 9, 2026: The Architectural Trap – Forcing BFCache by Disabling Infrastructure Safeguards
+
+To guarantee that independent webmasters could never opt-out of this memory-freezing ecosystem, Google executed a multi-layered architectural blockade across modern Chromium versions, systematically dismantling every standard network and programmatic self-defense protocol used by developers worldwide:
+
+1. **Ignoring Server-Level Cache Directives (`.htaccess` / Apache / Nginx):** The absolute universal standard to prevent state-restoration conflicts or dynamic script freezes is deploying explicit cache eviction instructions from the origin server:
+   * `Cache-Control: no-store, must-revalidate`
+   * `Pragma: no-cache`
+   In a predatory pivot, Chromium officially updated its engine logic to **explicitly ignore `Cache-Control: no-store, must-revalidate` and `Pragma: no-cache` direct signals on HTTPS environments**, forcing pages into the BFCache regardless of direct server configuration instructions.
+2. **The Execution of the `unload` Lifecycle Event:** For over fifteen years, injecting an empty `window.addEventListener('unload', ...)` listener served as the bulletproof, native programmatic fail-safe to compel browsers to destroy the page state on navigation, avoiding corrupted DOM baselines upon back-clicks. Chromium officially deprecated and disabled this event's capacity to block the BFCache. By shifting the platform default from `allow` to `deny`, Chrome registers the event listener but intentionally refuses to execute it, forcefully freezing the uncleaned AdSense vignette layout state (`/#google_vignette`) into persistent browser memory.
+3. **The Neutralization of `Permissions-Policy: unload=()`:** When Google originally announced the removal of the `unload` lifecycle, they directed engineering channels to leverage HTTP response headers like `Permissions-Policy: unload=()` to safely regulate the execution of third-party tracking scripts. Chromium has overridden the behavior of these security sandboxes. The engine now prioritizes its aggressive BFCache snapshot preservation over the developer's explicit network security directives, leaving scripts like `adsbygoogle.js` free to hijack the history frame while rendering the webmaster entirely defenseless.
+
+For platforms operating with a 98.5% mobile user ecosystem, this absolute restriction results in an unrecoverable structural deadlock: mobile browsers are forced to restore stale, frozen DOM snapshots, completely locking up responsive layouts, stalling dynamic content streams, and collapsing mobile ad impressions to absolute zero.
+
 ---
 
 # 🇪🇸 Versión en Español: Cronología del Abandono de Google
@@ -74,9 +87,26 @@ Esta actualización deja al descubierto una asimetría corporativa escandalosa:
 
 En lugar de desplegar exactamente esta misma corrección en `adsbygoogle.js`, los canales de ingeniería de AdSense han optado por mantener un silencio administrativo absoluto en el ticket de Chromium #544217146. Para colmo de males, actualmente están forzando una opción automática a nivel de cuenta ("Maximizar la cobertura de los mensajes") que obliga a inyectar capas de consentimiento automatizadas sobre interfaces móviles que ellos ya saben de antemano que se van a congelar en un estado zombi.
 
+
 ### ❌ Última Hora: Capitulación Oficial de Google y Bloqueo de Soporte
 
 Los canales oficiales de Ingeniería de Sellside de Google han solicitado formalmente cesar toda comunicación directa sobre este asunto, declarando explícitamente que no proporcionarán más respuestas. En una admisión extraordinaria de fallo estructural, el equipo de soporte confirmó que este caso está clasificado como un problema a "largo plazo" debido a que **"AdSense es una arquitectura dinosaurio que jamás fue diseñada para gestionar las mecánicas de BFCache."**
 
 En lugar de destinar recursos a reescribir sus obsoletos scripts de monetización, Google ha optado por una estrategia de silencio de radio operativo y abandono del editor, obligando de facto a los webmasters independientes a absorber el 100% de la sangría constante de ingresos e impresiones móviles.
+
+
+### 📢 9 de Septiembre de 2026: La Trampa Arquitectónica – Forzar el BFCache Desactivando las Salvaguardas de la Infraestructura
+
+Para garantizar que los editores independientes nunca pudieran autoexcluirse de este ecosistema de congelación de memoria, Google ha ejecutado un bloqueo arquitectónico multinivel en las versiones modernas de Chromium, desmantelando sistemáticamente cada protocolo estándar de red y autodefensa programática utilizado por los desarrolladores a nivel mundial:
+
+1. **Ignorar las Directivas de Caché a Nivel de Servidor (`.htaccess` / Apache / Nginx):** El estándar universal absoluto para mitigar los conflictos de restauración de estado o la congelación de scripts dinámicos consiste en desplegar instrucciones explícitas de descarte de caché desde el servidor de origen:
+   * `Cache-Control: no-store, must-revalidate`
+   * `Pragma: no-cache`
+   En un giro abusivo, Chromium actualizó oficialmente la lógica de su motor para **ignorar explícitamente las señales de `Cache-Control: no-store, must-revalidate` y `Pragma: no-cache` en redes HTTPS seguras**, forzando a las páginas a entrar en el BFCache independientemente de las instrucciones directas de configuración del servidor.
+
+2. **La Ejecución del Evento de Ciclo de Vida `unload`:** Durante más de quince años, inyectar un listener vacío `window.addEventListener('unload', ...)` servía como el salvavidas programático nativo e infalible para obligar a los navegadores a destruir el estado de la página al navegar, evitando líneas base de renderizado del DOM corruptas al volver atrás. Chromium depreció y desactivó oficialmente la capacidad de este evento para bloquear el BFCache. Al cambiar el comportamiento por defecto de la plataforma de `allow` a `deny`, Chrome registra el listener del evento pero se niega intencionadamente a ejecutarlo, guardando a la fuerza el estado del diseño no limpio de la viñeta de AdSense (`/#google_vignette`) en la memoria persistente del navegador.
+
+3. **La Neutralización de `Permissions-Policy: unload=()`:** Cuando Google anunció originalmente la eliminación del ciclo de vida `unload`, dirigió a los canales de ingeniería a aprovechar las cabeceras de respuesta HTTP como `Permissions-Policy: unload=()` para regular de forma segura la ejecución de scripts de rastreo de terceros. Chromium ha anulado el comportamiento de estos entornos seguros de ejecución. El motor ahora prioriza su aggressive preservación de capturas de BFCache por encima de las directivas explícitas de seguridad de red del desarrollador, dejando vía libre para que scripts como `adsbygoogle.js` secuestren el marco del historial mientras dejan al webmaster completamente indefenso.
+
+Para plataformas que operan con un ecosistema de usuarios móviles del 98,5%, esta restricción absoluta se traduce en un callejón sin salida estructural e irrecuperable: los navegadores móviles se ven obligados a restaurar capturas obsoletas y congeladas del DOM, bloqueando por completo las interfaces adaptables, paralizando los flujos de contenido dinámico y hundiendo las impresiones de anuncios móviles a cero absoluto.
 
